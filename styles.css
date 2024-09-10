@@ -1,0 +1,34 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+section {
+    padding: 20px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.carousel div {
+    display: none; /* Placeholder for JavaScript-controlled display */
+}
+
