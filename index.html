@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
+    <div class="sidebar">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -15,60 +15,50 @@
             <li><a href="#awards">Awards</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
+    </div>
+    <div class="main-content">
+        <section id="about">
+            <h1>About</h1>
+            <p>This is Louie Yang.</p>
+            <p>I’m a aspiring junior at the University of Toronto, specializing in Statistics – Statistical Machine Learning and Data Science Stream, and majoring in Computer Science.</p>
+            <p>As the Research Assistant at Shanghai Institute of Technical Physics, Chinese Academy of Sciences, I’ve had ample experience in Machine Vision, 3D modeling and image recognition. Proficient in diverse data analysis tools such as R, PowerBI, Matlab, MySQL, RStudio, I’ve led fruitful projects like Statistical Analysis on Research Project Investments (82% accuracy) and Piano Gesture Corrector based on 3D printing and Arduino.</p>
+            <p>As for my extracurricular activities, I love badminton, debate and trumpet (Seat of honour and trumpet soloist at uoft orchestra).</p>
+        </section>
 
-    <section id="about">
-        <h1>About</h1>
-        <p>This is Louie Yang.</p>
-        <p>I’m a aspiring junior at the University of Toronto, specializing in Statistics – Statistical Machine Learning and Data Science Stream, and majoring in Computer Science.</p>
-        <p>As the Research Assistant at Shanghai Institute of Technical Physics, Chinese Academy of Sciences, I’ve had ample experience in Machine Vision, 3D modeling and image recognition. Proficient in diverse data analysis tools such as R, PowerBI, Matlab, MySQL, RStudio, I’ve led fruitful projects like Statistical Analysis on Research Project Investments (82% accuracy) and Piano Gesture Corrector based on 3D printing and Arduino. 
-        <p>As for my extracurricular activities, I love badminton, debate and trumpet (Seat of honour and trumpet soloist at uoft orchestra).</p>
-    </section>
+        <section id="skills">
+            <h1>Skills</h1>
+            <ul>
+                <li>Languages: R, Python (Pandas, NumPy, Matplotlib, Tensorflow), C, SQL</li>
+                <li>Tools: Git, VS Code, VS Studio, Microsoft (Word, Powerpoint, Outlook, Excel, Teams), Zoom, RStudio, PowerBI, Matlab, MySQL</li>
+            </ul>
+        </section>
 
-    <section id="skills">
-        <h1>Skills</h1>
-        <ul>
-            <li>JavaScript/TypeScript</li>
-            <li>React</li>
-            <li>Git, version control</li>
-            <li>Linux</li>
-            <li>Python</li>
-            <li>HTML/CSS</li>
-            <li>SQL</li>
-            <li>GraphQL</li>
-            <li>Scikit Learn</li>
-            <li>Pytorch</li>
-            <li>R, PowerBI, Matlab, MySQL</li>
-        </ul>
-    </section>
-
-    <section id="experience">
-        <h1>Experience</h1>
-        <div class="carousel">
-            <div class="carousel-item">
-                <h2>Projects</h2>
-                <p>Statistical Analysis on Research Project Investments</p>
-                <p>Piano Gesture Corrector based on 3D printing and Arduino</p>
+        <section id="experience">
+            <div class="experience-item">
+                <h1>Projects</h1>
+                <p>Statistical Analysis on Research Project Investments - Performed deep statistical analysis and visualization on investment data, utilizing RStudio to drive insights and predict trends.</p>
+                <p>Piano Gesture Corrector - Engineered a device using Arduino and 3D printing technology to correct piano playing gestures, enhancing the learning curve for beginners.</p>
             </div>
-            <div class="carousel-item">
-                <h2>Work</h2>
-                <p>Research Assistant at Shanghai Institute of Technical Physics, Chinese Academy of Sciences</p>
-                <p>VP of Technology - University of Toronto Scarborough</p>
+            <div class="experience-item">
+                <h1>Professional Experience</h1>
+                <p>Research Assistant at Shanghai Institute - Designed and developed flexible sensors for real-time gesture recognition, contributing to advancements in human-computer interaction technologies.</p>
+                <p>VP of Technology at UTSC - Led technology workshops and supported the integration of Python skills into biological research, showcasing interdisciplinary applications of computer science.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="awards">
-        <h1>Awards</h1>
-        <p>E-Fund Entrance Scholarship of Excellence - 10,000 CAD</p>
-    </section>
+        <section id="awards">
+            <h1>Awards</h1>
+            <p>E-Fund Entrance Scholarship of Excellence - $10,000</p>
+            <p>Dean's List at the University of Toronto, 2024</p>
+        </section>
 
-    <section id="contact">
-        <h1>Let’s Connect</h1>
-        <p>If you're interested in my work or have exciting opportunities in machine learning and data analysis, please reach out!</p>
-        <p>Email: <a href="mailto:louieyang61@gmail.com">louieyang61@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/fanglu-yang-aa9285315/">Visit my LinkedIn</a></p>
-    </section>
-
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Let's connect! If you're interested in my work or have exciting opportunities in machine learning and data analysis, feel free to reach out:</p>
+            <a href="mailto:louie.yang@mail.utoronto.ca">Email</a> | <a href="https://linkedin.com/in/fanglu-yang-aa9285315">LinkedIn</a>
+        </section>
+    </div>
+    <div class="profile-photo">
+        <img src="profile.jpg" alt="Louie Yang">
 </body>
 </html>
