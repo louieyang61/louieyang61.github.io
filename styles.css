@@ -5,13 +5,15 @@ body, html {
 }
 
 .sidebar {
-    width: 20%;
+    width: 180px; /* Reduced width from 20% to 180px */
     background-color: #333;
     color: white;
     padding: 20px;
     overflow: auto;
     height: 100vh;
     position: fixed;
+    left: 0;
+    top: 0;
 }
 
 .sidebar ul {
@@ -27,9 +29,9 @@ body, html {
 }
 
 .main-content {
-    margin-left: 20%;
+    margin-left: 200px; /* Adjusted margin to accommodate the sidebar width */
     padding: 20px;
-    max-width: 800px;
+    max-width: calc(100% - 220px); /* Ensure the main content doesn't overflow */
 }
 
 .about-content {
@@ -43,7 +45,7 @@ body, html {
 }
 
 .profile-photo {
-    flex: 0 0 200px;
+    flex: 0 0 180px;
     margin-left: 20px;
 }
 
