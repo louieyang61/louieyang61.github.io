@@ -5,7 +5,7 @@ body, html {
 }
 
 .sidebar {
-    width: 180px; /* Reduced width from 20% to 180px */
+    width: 150px;
     background-color: #333;
     color: white;
     padding: 20px;
@@ -29,9 +29,9 @@ body, html {
 }
 
 .main-content {
-    margin-left: 200px; /* Adjusted margin to accommodate the sidebar width */
+    margin-left: 170px;
     padding: 20px;
-    max-width: calc(100% - 220px); /* Ensure the main content doesn't overflow */
+    max-width: calc(100% - 190px);
 }
 
 .about-content {
@@ -45,7 +45,7 @@ body, html {
 }
 
 .profile-photo {
-    flex: 0 0 180px;
+    flex: 0 0 200px;
     margin-left: 20px;
 }
 
@@ -66,4 +66,23 @@ h1 {
 a {
     color: blue;
     text-decoration: underline;
+}
+
+/* Additional media query for better responsiveness */
+@media screen and (max-width: 800px) {
+    .sidebar {
+        width: 120px;
+    }
+    .main-content {
+        margin-left: 140px;
+        max-width: calc(100% - 160px);
+    }
+    .profile-photo {
+        flex: 1 0 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .about-content {
+        flex-direction: column;
+    }
 }
