@@ -2,13 +2,13 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #1b1b1e; /* Dark background for the whole page */
-    color: #d8dbe2; /* Light gray text color */
+    background-color: #1b1b1e;
+    color: #d8dbe2;
 }
 
 .sidebar {
     width: 120px;
-    background-color: #373f51; /* Dark gray sidebar background */
+    background-color: #373f51;
     color: white;
     padding: 20px;
     overflow: auto;
@@ -24,7 +24,7 @@ body, html {
 }
 
 .sidebar ul li a {
-    color: #a9bcd0; /* Light blue links in sidebar */
+    color: #a9bcd0;
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -33,7 +33,7 @@ body, html {
 .main-content {
     margin-left: 170px;
     padding: 20px;
-    max-width: calc(100% - 190px); /* Adjust max-width for closer text */
+    max-width: calc(100% - 190px);
 }
 
 .about-content {
@@ -44,7 +44,7 @@ body, html {
 .about-text {
     flex: 1;
     min-width: 200px;
-    max-width: 60%; /* Reduced max-width for text */
+    max-width: 60%;
 }
 
 .profile-photo {
@@ -63,11 +63,10 @@ section {
 }
 
 h1, a {
-    color: #009999; /* Teal color for headings and links */
+    color: #009999;
     text-decoration: none;
 }
 
-/* Additional media query for better responsiveness */
 @media screen and (max-width: 800px) {
     .sidebar {
         width: 120px;
