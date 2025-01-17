@@ -67,6 +67,22 @@ h1, a {
     text-decoration: none;
 }
 
+.view-work-button {
+    padding: 10px 20px;
+    background-color: #009999;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.view-work-button:hover {
+    background-color: #a9bcd0;
+}
+
+
 @media screen and (max-width: 800px) {
     .sidebar {
         width: 120px;
