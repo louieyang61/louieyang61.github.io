@@ -1,102 +1,129 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #1b1b1e;
-    color: #d8dbe2;
+/* 
+  Use the user's system theme preference (light or dark) to set 
+  background and text colors. You can tweak these values to suit 
+  your style.
+*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2e2e2e;
+    color: #fefefe;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+  }
 }
 
-.sidebar {
-    width: 120px;
-    background-color: #373f51;
-    color: white;
-    padding: 20px;
-    overflow: auto;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
+/* Navigation bar styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  /* Slightly translucent background so text remains readable on both themes */
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 999;
 }
 
-.sidebar ul li a {
-    color: #a9bcd0;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
+/* Left side: site title */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
 }
 
-.main-content {
-    margin-left: 170px;
-    padding: 20px;
-    max-width: calc(100% - 190px);
+/* Right side: nav links + icons */
+.navbar-right {
+  display: flex;
+  align-items: center;
 }
 
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
+/* Horizontal nav menu */
+.navbar-right ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar-right li {
+  margin-left: 20px;
+}
+.navbar-right a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.about-text {
-    flex: 1;
-    min-width: 200px;
-    max-width: 60%;
+/* Icon buttons for email & LinkedIn */
+.icon-links {
+  display: flex;
+  margin-left: 20px;
+}
+.icon-links a {
+  margin-left: 10px;
+}
+.icon-links img {
+  width: 24px;
+  height: 24px;
 }
 
-.profile-photo {
-    flex: 0 0 200px;
-    margin-left: 20px;
+/* Hero (landing) section */
+.hero {
+  margin-top: 70px; /* avoid overlapping the fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* fill most of the viewport height */
+}
+.hero-content {
+  text-align: center;
+}
+#slideshow-text {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.profile-photo img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
+/* Example sections below hero */
 section {
-    margin-bottom: 40px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h2 {
+  margin-top: 0;
 }
 
-h1, a {
-    color: #009999;
-    text-decoration: none;
-}
-
-.view-work-button {
-    padding: 10px 20px;
-    background-color: #009999;
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.view-work-button:hover {
-    background-color: #a9bcd0;
-}
-
-
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 800px) {
-    .sidebar {
-        width: 120px;
-    }
-    .main-content {
-        margin-left: 140px;
-        max-width: calc(100% - 150px);
-    }
-    .profile-photo {
-        flex: 1 0 100%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-    .about-content {
-        flex-direction: column;
-    }
+  .navbar-right ul li {
+    margin-left: 10px;
+  }
+  .hero {
+    margin-top: 60px;
+  }
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
 }
