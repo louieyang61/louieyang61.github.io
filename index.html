@@ -7,18 +7,39 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="sidebar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-  <div class="main-content">
-    <!-- About Section -->
+<header class="navbar">
+    <!-- Left side: site title or brand -->
+    <div class="navbar-left">
+      <a href="#home" class="site-title">Louie Yang</a>
+    </div>
+    <!-- Right side: nav links + icon buttons -->
+    <nav class="navbar-right">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+      <!-- Icon buttons for email & LinkedIn -->
+      <div class="icon-links">
+        <a href="mailto:louieyang61@gmail.com" title="Email me">
+          <img src="email_icon.png" alt="Email" />
+        </a>
+        <a href="https://linkedin.com/in/fangluyang/" target="_blank" title="LinkedIn">
+          <img src="linkedin_icon.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero section with slideshow text and profile pic -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 id="slideshow-text"></h1>
+      <img src="profile.jpg" alt="Louie Yang" class="profile-pic" />
+    </div>
+  </section>
     <section id="about">
       <h1>About</h1>
       <div class="about-content">
