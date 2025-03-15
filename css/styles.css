@@ -55,6 +55,14 @@ body.sidebar-open {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Highlight active page in navigation */
+.sidebar ul li a.active {
+    background-color: #8f9499; /* Medium gray background for active link */
+    color: #ffffff; /* White text for better contrast */
+    font-weight: bold;
+    border-left: 4px solid #e3e0da; /* Light border to highlight active page */
+}
+
 /* Hover effect on navigation links */
 .sidebar ul li a:hover {
     background-color: #8f9499; /* Medium gray background on hover */
@@ -125,21 +133,31 @@ body.sidebar-open {
     left: 320px;
 }
 
-/* About section layout */
-.about-content {
+/* Home section layout (formerly About) */
+.home-content {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.about-text {
+.home-text {
     flex: 1;
     min-width: 200px;
-    max-width: 60%;
+    max-width: 55%;
+}
+
+/* Larger font size for home page paragraphs */
+#home p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
 }
 
 .profile-photo {
-    flex: 0 0 200px;
-    margin-left: 20px;
+    flex: 0 0 300px; /* Larger fixed width */
+    margin-left: 40px; /* Move further to the right */
+    text-align: center;
 }
 
 .profile-photo img {
@@ -147,6 +165,13 @@ body.sidebar-open {
     height: auto;
     border-radius: 10px;
     border: 3px solid #658398; /* Muted blue border to profile image */
+}
+
+.profile-photo a {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* Section spacing */
@@ -195,6 +220,31 @@ p, li {
 .view-work-button:hover {
     background-color: #8f9499; /* Medium gray on hover */
     text-decoration: none; /* No underline on button hover */
+}
+
+/* Skills section enhancements */
+#skills p {
+    background-color: rgba(205, 207, 208, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 3px solid #658398;
+}
+
+#skills p strong {
+    color: #658398;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* Awards section styling */
+#awards p {
+    background-color: rgba(205, 207, 208, 0.2);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border-left: 3px solid #658398;
 }
 
 /* Project and experience items with subtle borders */
@@ -252,14 +302,19 @@ p, li {
         flex: 1 0 100%;
         margin-left: 0;
         margin-top: 20px;
+        text-align: center;
     }
     
-    .about-content {
+    .home-content {
         flex-direction: column;
     }
     
-    .about-text {
+    .home-text {
         max-width: 100%;
+    }
+    
+    #home p {
+        font-size: 1.1rem; /* Slightly smaller on mobile */
     }
 }
 

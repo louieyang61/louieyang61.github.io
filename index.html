@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Louie Yang's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Home - Louie Yang's Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!-- Hamburger Menu Toggle -->
@@ -17,21 +17,22 @@
   <!-- Sidebar Navigation -->
   <div class="sidebar" id="sidebar">
     <ul id="navMenu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/projects.html">Projects</a></li>
+      <li><a href="pages/experience.html">Experience</a></li>
+      <li><a href="pages/skills.html">Skills</a></li>
+      <li><a href="pages/awards.html">Awards</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
     </ul>
   </div>
 
   <!-- Main Content -->
   <div class="main-content" id="mainContent">
-    <section id="about">
-      <h1>About</h1>
-      <div class="about-content">
-        <div class="about-text">
+    <!-- Home Section (formerly About) -->
+    <section id="home">
+      <h1>Home</h1>
+      <div class="home-content">
+        <div class="home-text">
           <p>
             I'm Louie Yang – a dynamic and innovative data scientist in training at the University of Toronto, specializing in Statistical Machine Learning and Data Science. Whether refining advanced models to predict TTC delays or engineering real-time gesture recognition sensors, I blend rigorous data analysis with creative problem-solving to transform complex challenges into actionable insights.
           </p>
@@ -40,147 +41,15 @@
           </p>
         </div>
         <div class="profile-photo">
-          <img src="profile.jpg" alt="Louie Yang">
-          <!-- Resume link now appears as plain text right below the profile photo -->
-          <a href="./Resume.pdf">View my resume</a>
+          <img src="images/profile.jpg" alt="Louie Yang">
+          <a href="documents/Resume.pdf">View my resume</a>
         </div>
       </div>
     </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <h1>Skills</h1>
-      <ul>
-        <li>Languages: Python (Pandas, NumPy, Matplotlib, Tensorflow), C, Java, JavaScript, HTML/CSS, R, SQL</li>
-        <li>Skills/Tools: Git, VS Code, Office Suite, React, Arduino, RStudio, PowerBI, Tableau, Microsoft Azure, Jupyter Notebook, OpenRefine, PostgreSQL, 3D-Modeling, Data Analysis (Regression, Clustering, Cross-Validation, Hypothesis Testing, Bootstrap, K-Fold, Decision Tree, Random Forest, XGBoost, Sci-kit Learn, Keras)</li>
-      </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h1>Projects</h1>
-      <div class="project-item">
-        <h2>Car Evaluation Prediction ML Model Using XGBoost Classifier</h2>
-        <p><strong>Analyzed a dataset with 1000+ entries from the UCI Machine Learning Repository</strong> Feb 2025</p>
-        <ul>
-          <li>Achieved 98% data completeness by handling missing values and applying label encoding via Pandas and NumPy.</li>
-          <li>Trained an XGBoost classifier with 98.92% validation accuracy using hyperparameter tuning via GridSearchCV.</li>
-          <li>Visualized feature importance using Matplotlib via a bar chart highlighting top predictors for car acceptability.</li>
-        </ul>
-
-        <h2>Statistical Analysis on Research Project Investments by the MCU</h2>
-        <p><strong>Analyzed a 20-year (2004–2024) dataset from the Ministry of Colleges and Universities (STAA57 Group Project)</strong> Mar 2024 – Apr 2024</p>
-        <ul>
-          <li>Demonstrated data analysis skills through analyzing and visualizing investment data with plots, graphs, T-test and Var-test using RStudio.</li>
-          <li>Conducted data cleaning and data wrangling on a dataset (from open.toronto.ca) with 5000+ entries.</li>
-          <li>Applied statistical models including bootstrap, linear regression, cross-validation, and logistic regression with 81.7% accuracy.</li>
-        </ul>
-          <a href="./staa57_project_with_appendix.pdf">View my project</a>
-
-        <h2>Planetze – A Carbon-Tracking Sustainability App (UI/UX)</h2>
-        <p><strong>Designed an Android app that tracks, reduces, and offsets carbon footprint while offering real-time data and personalized insights</strong> Dec 2024 – Jan 2025</p>
-        <ul>
-          <li>Implemented SQL for local storage and Firebase for real-time database operations such as registrations and authentication.</li>
-          <li>Utilized Java for backend logistics, logistics, including data calculations and UI control, and performed Mockito and JUnit tests, increasing login reliability by 60%.</li>
-          <li>Developed the front-end in Android Studio using XML for an interactive user experience.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-      <h1>Experience</h1>
-      <div class="experience-item">
-        <h2>Best Overall Project in UofT SDSS (Students in Data Science and Statistics) Datathon</h2>
-        <p><strong>Completed a project of modeling, visualization and YouTube demo with business insights for transit within 24 hours.<strong>Mar 2025</p>
-        <ul>
-          <li>Achieved over 99% accuracy across all 9 datasets, 150k+ entries to predict delay of 3 different TTC transits using Logistic Regression and XGBoost Regressor.</li>
-          <li>Designed an interactive Power BI dashboard featuring dynamic filters for station, route direction, date range, time and map-based location searches with scenario-based analysis of historical and predicted delay.</li>
-        </ul>
-        <a href="https://devpost.com/software/5w-1h-am-i-late">View my project</a>
-      </div>
-      <div class="experience-item">
-        <h2>Research Assistant</h2>
-        <p><strong>Shanghai Institute of Technical Physics, Chinese Academy of Sciences</strong> Apr 2021 – Nov 2021</p>
-        <ul>
-          <li>Won 3rd Place in the Shanghai Youth Science and Technology Innovation Competition &amp; Shanghai Future Science Star by refining my Piano Gesture Corrector project using 3D printing and Arduino.</li>
-          <li>3D-modeled and printed 10+ prototypes with Autodesk &amp; Gems, integrating an ultrasonic sensor and buzzer to provide real-time detection, improving gesture stability by 30%.</li>
-          <li>Designed a flexible sensor that recognizes real-time gestures via angle and curve detection, enhancing ergonomics for piano beginners by increasing detection accuracy by 55%.</li>
-        </ul>
-        <a href="./Piano Gesture Corrector based on 3D Printing and Arduino.pdf">View my project(Chinese)</a>
-      </div>
-      <div class="experience-item">
-        <h2>VP of Technology</h2>
-        <p><strong>BACSA (Biotechnology and Computer Science Association at University of Toronto)</strong> Aug 2024 – Present</p>
-        <ul>
-          <li>Led a team of 5 directors with weekly meetings and organized tech conferences and python coding competitions.</li>
-          <li>Hosted and presented computer science workshops on Python, Git, etc.</li>
-          <li>Managed club website development and updates using HTML, CSS, and JavaScript.</li>
-        </ul>
-      </div>
-      <div class="experience-item">
-        <h2>Seat of Honour and Trumpet Soloist</h2>
-        <p><strong>UTSC (University of Toronto Scarborough) Orchestra</strong> Sep 2023 - Present</p>
-        <ul>
-          <li>Strong coordinating skills and leadership developed by playing trumpet solos on grand events such as the Remembrance Day and school orchestra performance.</li>
-          <li>Won 4 first prizes in national trumpet and orchestra competitions.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards">
-      <h1>Awards</h1>
-      <p>2023 UTSC Green Path Program Entrance Scholarship - $10,000</p>
-      <p>2023-2024 University of Toronto Scarborough Dean's List</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h1>Contact</h1>
-      <p>Let's connect! If you're interested in my work or have exciting opportunities in machine learning and data analysis, feel free to reach out:</p>
-      <a href="mailto:louieyang61@gmail.com">Email</a> | <a href="https://linkedin.com/in/fangluyang/">LinkedIn</a>
-    </section>
   </div>
 
-  <!-- JavaScript for menu functionality -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const menuToggle = document.getElementById('menuToggle');
-      const sidebar = document.getElementById('sidebar');
-      
-      // Toggle sidebar and hamburger icon when clicked
-      menuToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('show');
-        menuToggle.classList.toggle('active'); 
-        document.body.classList.toggle('sidebar-open');
-      });
-      
-      // Close sidebar when a link is clicked
-      const navLinks = document.querySelectorAll('#navMenu a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          if (window.innerWidth <= 900) {
-            sidebar.classList.remove('show');
-            menuToggle.classList.remove('active');
-            document.body.classList.remove('sidebar-open');
-          }
-        });
-      });
-      
-      // Handle click outside sidebar on mobile
-      document.addEventListener('click', function(event) {
-        const isClickInsideSidebar = sidebar.contains(event.target);
-        const isClickOnMenuToggle = menuToggle.contains(event.target);
-        
-        if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('show')) {
-          sidebar.classList.remove('show');
-          menuToggle.classList.remove('active');
-          document.body.classList.remove('sidebar-open');
-        }
-      });
-    });
-  </script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
 
