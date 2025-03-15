@@ -7,8 +7,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="sidebar">
-    <ul>
+  <!-- Hamburger Menu Toggle -->
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <ul id="navMenu">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -17,7 +25,9 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
-  <div class="main-content">
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
     <section id="about">
       <h1>About</h1>
       <div class="about-content">
@@ -132,6 +142,45 @@
       <a href="mailto:louieyang61@gmail.com">Email</a> | <a href="https://linkedin.com/in/fangluyang/">LinkedIn</a>
     </section>
   </div>
+
+  <!-- JavaScript for menu functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const sidebar = document.getElementById('sidebar');
+      
+      // Toggle sidebar and hamburger icon when clicked
+      menuToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('show');
+        menuToggle.classList.toggle('active'); 
+        document.body.classList.toggle('sidebar-open');
+      });
+      
+      // Close sidebar when a link is clicked
+      const navLinks = document.querySelectorAll('#navMenu a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 900) {
+            sidebar.classList.remove('show');
+            menuToggle.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+          }
+        });
+      });
+      
+      // Handle click outside sidebar on mobile
+      document.addEventListener('click', function(event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickOnMenuToggle = menuToggle.contains(event.target);
+        
+        if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('show')) {
+          sidebar.classList.remove('show');
+          menuToggle.classList.remove('active');
+          document.body.classList.remove('sidebar-open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 

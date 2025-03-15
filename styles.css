@@ -3,55 +3,126 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #1b1b1e;
-    color: #d8dbe2;
+    background-color: #ede9e4; /* Off-white background */
+    color: #658398; /* Muted blue text */
+    overflow-x: hidden; /* Prevent horizontal scrollbar when content shifts */
 }
 
-/* Sidebar */
+/* When sidebar is open on mobile */
+body.sidebar-open {
+    overflow: hidden; /* Prevent scrolling of the page when sidebar is open */
+}
+
+/* Sidebar navigation (vertical layout) */
 .sidebar {
-    width: 120px;
-    /* Subtle gradient and box shadow for a modern look */
-    background: linear-gradient(180deg, #373f51 0%, #2c2f3a 100%);
-    color: white;
-    padding: 20px;
-    overflow: auto;
-    height: 100vh;
+    width: 300px; /* Wider sidebar */
+    background-color: #658398; /* Muted blue sidebar */
+    color: #ede9e4; /* Off-white text for sidebar */
+    padding: 60px 0 20px 0; /* More padding at top for first item */
     position: fixed;
-    left: 0;
     top: 0;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+    left: -300px; /* Start off-screen */
+    height: 100vh;
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: left 0.3s ease;
+}
+
+.sidebar.show {
+    left: 0; /* Show sidebar when class is added */
 }
 
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
+    margin: 5px 0;
+    width: 100%;
 }
 
 .sidebar ul li a {
-    color: #a9bcd0;
+    color: #ede9e4; /* Off-white links in sidebar */
     text-decoration: none;
     display: block;
-    padding: 10px;
+    padding: 12px 20px;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect on sidebar links */
+/* Hover effect on navigation links */
 .sidebar ul li a:hover {
-    background-color: #2c3545;
-    color: #fff;
+    background-color: #8f9499; /* Medium gray background on hover */
+    color: #ede9e4; /* Keep text off-white */
 }
 
-/* Main content area */
+/* Hamburger menu icon - always visible on mobile */
+.menu-toggle {
+    display: none; /* Hidden by default, shown in media query */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #658398; /* Muted blue hamburger background */
+    border-radius: 4px;
+    z-index: 1002;
+    transition: left 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Menu toggle bars */
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ede9e4; /* Off-white hamburger bars */
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* X transformation */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Main content area - adjusted for sidebar */
 .main-content {
-    margin-left: 170px;
+    margin-left: 0; /* Start with no margin on mobile */
     padding: 20px;
-    max-width: calc(100% - 190px);
+    width: 100%;
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+    background-color: #ede9e4; /* Off-white content background */
+}
+
+/* When sidebar is visible - push content */
+.sidebar.show ~ .main-content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+}
+
+/* Move menu toggle with content */
+.sidebar.show ~ .menu-toggle {
+    left: 320px;
 }
 
 /* About section layout */
@@ -75,6 +146,7 @@ body, html {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    border: 3px solid #658398; /* Muted blue border to profile image */
 }
 
 /* Section spacing */
@@ -83,43 +155,111 @@ section {
 }
 
 /* Headings and links color */
-h1, a {
-    color: #009999;
+h1, h2, a {
+    color: #658398; /* Muted blue headings and links */
     text-decoration: none;
+}
+
+/* Add a slight underline effect on links when hovered */
+a:hover {
+    text-decoration: underline;
+    color: #8f9499; /* Medium gray on hover */
+}
+
+/* Section headings with bottom border */
+section h1 {
+    border-bottom: 2px solid #8f9499; /* Medium gray bottom border */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Paragraph text */
+p, li {
+    color: #5a5859; /* Dark gray for body text for better contrast */
+    line-height: 1.6;
 }
 
 /* "View Work" button style */
 .view-work-button {
     padding: 10px 20px;
-    background-color: #009999;
-    color: white;
+    background-color: #658398; /* Muted blue button */
+    color: #ede9e4; /* Off-white text */
     text-decoration: none;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .view-work-button:hover {
-    background-color: #a9bcd0;
+    background-color: #8f9499; /* Medium gray on hover */
+    text-decoration: none; /* No underline on button hover */
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 800px) {
+/* Project and experience items with subtle borders */
+.project-item, .experience-item {
+    border-left: 3px solid #658398; /* Muted blue left border */
+    padding-left: 15px;
+    margin-bottom: 25px;
+    background-color: rgba(205, 207, 208, 0.2); /* Very light gray background */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Non-mobile (larger screens) */
+@media screen and (min-width: 901px) {
+    .menu-toggle {
+        display: none; /* Hide hamburger on desktop */
+    }
+    
     .sidebar {
-        width: 120px;
+        left: 0; /* Always show sidebar on desktop */
+        width: 220px;
+        padding-top: 20px;
+        background-color: #658398; /* Muted blue sidebar */
     }
+    
     .main-content {
-        margin-left: 140px;
-        max-width: calc(100% - 150px);
+        margin-left: 220px;
+        width: calc(100% - 220px);
+        background-color: #ede9e4; /* Off-white content background */
     }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 900px) {
+    .menu-toggle {
+        display: flex; /* Always show hamburger on mobile */
+    }
+    
+    .sidebar {
+        width: 300px;
+        background-color: #658398; /* Muted blue sidebar */
+    }
+    
+    /* First section needs padding to not be under the menu toggle */
+    section:first-child {
+        padding-top: 30px;
+    }
+    
+    /* Center first heading on mobile */
+    section:first-child h1 {
+        margin-top: 20px;
+    }
+    
     .profile-photo {
         flex: 1 0 100%;
         margin-left: 0;
         margin-top: 20px;
     }
+    
     .about-content {
         flex-direction: column;
+    }
+    
+    .about-text {
+        max-width: 100%;
     }
 }
 
