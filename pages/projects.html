@@ -29,39 +29,78 @@
   <!-- Main Content -->
   <div class="main-content" id="mainContent">
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="projects-section">
       <h1>Projects</h1>
       
-      <div class="project-item">
-        <h2>TTC Delay Analytics and Prediction - Datathon: 1st Winner (Best Overall)</h2>
-        <p><strong>UofT SDSS (Students in Data Science and Statistics) Datathon</strong> Mar 2025</p>
-        <ul>
-          <li>Evaluated 10 datasets(150k+ entries) of Subway, Streetcar and Bus delay data using Python (Pandas, Numpy) and achieved over 99% accuracy on lateness prediction with Correlation Heatmap, Logistic Regression, Classification, and XGBoost.</li>
-          <li>Collaborated analytical analysis with Data Scientists and UI/UX Designer to integrate PowerBI and Figma for interactive dashboard design with 50+ dynamic filtering, gauge charts, data tables, bar and line graphs.</li>
-          <li>Won Best Overall Project out of 100 students in consideration of Visualization, Modeling, and Business Insights.</li>
-        </ul>
-        <a href="https://devpost.com/software/5w-1h-am-i-late?ref_content=my-projects-tab&ref_feature=my_projects">View my project</a>
-      </div>
-      
-      <div class="project-item">
-        <h2>Car Evaluation Prediction ML Model Using XGBoost Classifier</h2>
-        <p><strong>Analyzed a dataset with 1000+ entries from the UCI Machine Learning Repository</strong> Feb 2025</p>
-        <ul>
-          <li>Achieved 98% data completeness by handling missing values and applying label encoding via Pandas and NumPy.</li>
-          <li>Trained an XGBoost classifier with 98.92% accuracy using hyperparameter tuning via GridSearchCV.</li>
-          <li>Visualized feature importance using Matplotlib via bar charts highlighting top predictors for car acceptability.</li>
-        </ul>
-      </div>
-      
-      <div class="project-item">
-        <h2>Statistical Analysis on Research Project Investments by the MCU</h2>
-        <p><strong>Analyzed a 20-year (2004–2024) dataset from the Ministry of Colleges and Universities (Coursework Project)</strong> Mar 2024 – Apr 2024</p>
-        <ul>
-          <li>Implemented RStudio for data cleaning, wrangling, statistical analysis (bootstrap, clustering, cross-validation, logistic regression, random forest), and data visualization (ggplot) on a dataset with 5000+ entries.</li>
-          <li>Conducted A/B testing from different approaches, recommending Govt of Ontario to diversify research investment.</li>
-        </ul>
-        <a href="https://github.com/louieyang61/Research-Project-Investments">View my project</a>
-      </div>
+      <div class="projects-container">
+
+        <div class="project-card">
+          <a href="https://devpost.com/software/5w-1h-am-i-late?ref_content=my-projects-tab&ref_feature=my_projects" target="_blank">
+            <div class="project-image">
+              <img src="../images/SDSS Datathon.jpg" alt="TTC Delay Analytics and Prediction - Datathon: 1st Winner (Best Overall)">
+            </div>
+            <div class="project-info">
+              <h2>TTC Delay Analytics and Prediction - Datathon: 1st Winner (Best Overall)</h2>
+              <p><strong>UofT SDSS (Students in Data Science and Statistics) Datathon</strong> Mar 2025</p>
+              <ul>
+                <li>Evaluated 10 datasets(150k+ entries) of Subway, Streetcar and Bus delay data using Python (Pandas, Numpy) and achieved over 99% accuracy on lateness prediction with Correlation Heatmap, Logistic Regression, Classification, and XGBoost.</li>
+                <li>Collaborated analytical analysis with Data Scientists and UI/UX Designer to integrate PowerBI and Figma for interactive dashboard design with 50+ dynamic filtering, gauge charts, data tables, bar and line graphs.</li>
+                <li>Won Best Overall Project out of 100 students in consideration of Visualization, Modeling, and Business Insights.</li>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <a href="https://github.com/louieyang61/piano-gesture-corrector" target="_blank">
+            <div class="project-image">
+              <img src="../images/Piano gesture corrector.jpg" alt="Piano gesture corrector">
+            </div>
+            <div class="project-info">
+              <h2>Piano gesture corrector</h2>
+              <p><strong>A computer vision-based system to help piano players improve their hand posture and technique.</strong> Apr 2021 - Oct 2021</p>
+              <ul>
+                <li>Developed a computer vision pipeline using OpenCV and MediaPipe to recognize real-time piano hand
+gestures via 21-point hand landmark extraction, improving gesture detection accuracy by 65%.</li>
+                <li>Enhanced player gesture stability by 40% through 10+ iterative 3D-printed designs and integrated
+Arduino-based feedback mechanisms with ultrasonic sensing and buzzer alerts for real-time posture correction.</li>
+                <li>Awarded 3rd Prize out of 15,000+ students in both the Shanghai Youth Science and Technology
+Innovation Competition and the Shanghai Future Science Star.</li>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="../images/Car evaluation.png" alt="Car Evaluation Prediction ML Model Using XGBoost Classifier">
+            </div>
+            <div class="project-info">
+              <h2>Car Evaluation Prediction ML Model Using XGBoost Classifier</h2>
+              <p><strong>Analyzed a dataset with 1000+ entries from the UCI Machine Learning Repository</strong> Feb 2025</p>
+              <ul>
+                <li>Achieved 98% data completeness by handling missing values and applying label encoding via Pandas and NumPy.</li>
+                <li>Trained an XGBoost classifier with 98.92% accuracy using hyperparameter tuning via GridSearchCV.</li>
+                <li>Visualized feature importance using Matplotlib via bar charts highlighting top predictors for car acceptability.</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="project-card">
+          <a href="https://github.com/louieyang61/Research-Project-Investments" target="_blank">
+            <div class="project-image">
+              <img src="../images/Staa57.png" alt="Statistical Analysis on Research Project Investments by the MCU">
+            </div>
+            <div class="project-info">
+              <h2>Statistical Analysis on Research Project Investments by the MCU</h2>
+              <p><strong>Analyzed a 20-year (2004–2024) dataset from the Ministry of Colleges and Universities (Coursework Project)</strong> Mar 2024 – Apr 2024</p>
+              <ul>
+                <li>Implemented RStudio for data cleaning, wrangling, statistical analysis (bootstrap, clustering, cross-validation, logistic regression, random forest), and data visualization (ggplot) on a dataset with 5000+ entries.</li>
+                <li>Conducted A/B testing from different approaches, recommending Govt of Ontario to diversify research investment.</li>
+            </div>
+          </a>
+        </div>
+
       
     </section>
   </div>
