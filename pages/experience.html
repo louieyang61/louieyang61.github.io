@@ -14,6 +14,9 @@
     <span></span>
   </div>
 
+  <!-- Overlay for mobile sidebar -->
+  <div class="overlay" id="overlay"></div>
+
   <!-- Sidebar Navigation -->
   <div class="sidebar" id="sidebar">
     <ul id="navMenu">
@@ -31,27 +34,31 @@
     <!-- Work Experience Section -->
     <section id="work-experience">
       <h1>Work Experience</h1>
-      <div class="experience-item">
-        <h2>Data Science Co-op – LLM, LangChain, Embedding, Streamlit, Python, Alteryx, Power BI</h2>
-        <p><strong>Baker Tilly Canada</strong> May 2025 – Aug 2025 | Toronto, Canada</p>
+
+      <div class="experience-item animate-on-scroll">
+        <h2>Data Science Co-op</h2>
+        <p><strong>Baker Tilly Canada</strong> | May 2025 – Aug 2025 | Toronto, Canada</p>
+        <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:-8px;margin-bottom:14px;">LLM · LangChain · Embedding · Streamlit · Python · Alteryx · Power BI</p>
         <ul>
           <li>Designed and deployed a SOC 2 audit automation system with interactive ML-driven control testing dashboard and LLM chatbot for policy search and evidence interpretation, cutting manual workload by 90%.</li>
           <li>Developed an end-to-end ML pipeline (LangChain, Gemini, Python) that uses LLM-driven judgment to assess evidence across 80+ controls, increasing audit flagging accuracy by 85% and reducing review time by 70%.</li>
           <li>Implemented RAG with vector search and embeddings (LangChain, FAISS) to power dynamic SOC testing queries and policy lookups, enhancing interpretability and decision accuracy by 85%.</li>
-          <li>Engineered recursive OCR + anonymization system (Tesseract, SpaCy) for text extraction and entity masking and integrated Gemini to automate compliance decisions, cutting document processing time by 75%.</li>
-          <li>Designed Alteryx workflows for automated data cleaning, merging, and transformation and performed interactive Power BI dashboards, streamlining analysis speed for audit GL review and tax compliance reporting by 80%.</li>
+          <li>Engineered recursive OCR + anonymization system (Tesseract, SpaCy) for text extraction and entity masking, integrated Gemini to automate compliance decisions, cutting document processing time by 75%.</li>
+          <li>Designed Alteryx workflows for automated data cleaning, merging, and transformation and built interactive Power BI dashboards, streamlining analysis speed for audit GL review and tax compliance reporting by 80%.</li>
         </ul>
       </div>
-      <div class="experience-item">
-        <h2>Research Assistant – OpenCV, Arduino, 3D-Modelling & Printing</h2>
-        <p><strong>Shanghai Institute of Technical Physics, Chinese Academy of Sciences</strong> Apr 2021 – Nov 2021 | Shanghai, China</p>
+
+      <div class="experience-item animate-on-scroll delay-1">
+        <h2>Research Assistant</h2>
+        <p><strong>Shanghai Institute of Technical Physics, Chinese Academy of Sciences</strong> | Apr 2021 – Nov 2021 | Shanghai, China</p>
+        <p style="font-size:0.85rem;color:var(--color-text-light);margin-top:-8px;margin-bottom:14px;">OpenCV · Arduino · 3D-Modelling &amp; Printing</p>
         <ul>
           <li>Developed a computer vision pipeline using OpenCV and MediaPipe to recognize real-time piano hand gestures via 21-point hand landmark extraction, improving gesture detection accuracy by 65%.</li>
           <li>Performed statistical post-processing and gesture classification using Python (NumPy, scikit-learn) and conducted calibration experiments to reduce outlier noise and enhance tracking robustness.</li>
           <li>Enhanced player gesture stability by 40% through 10+ iterative 3D-printed designs and integrated Arduino-based feedback mechanisms with ultrasonic sensing and buzzer alerts for real-time posture correction.</li>
           <li>Awarded 3rd Prize out of 15,000+ students in both the Shanghai Youth Science and Technology Innovation Competition and the Shanghai Future Science Star.</li>
         </ul>
-        <a href="https://github.com/louieyang61/piano-gesture-corrector">View my project</a>
+        <a href="https://github.com/louieyang61/piano-gesture-corrector" class="btn" style="font-size:0.875rem;padding:8px 20px;">View Project →</a>
       </div>
     </section>
   </div>
@@ -59,4 +66,4 @@
   <!-- JavaScript -->
   <script src="../js/main.js"></script>
 </body>
-</html> 
+</html>

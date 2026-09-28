@@ -14,6 +14,9 @@
     <span></span>
   </div>
 
+  <!-- Overlay for mobile sidebar -->
+  <div class="overlay" id="overlay"></div>
+
   <!-- Sidebar Navigation -->
   <div class="sidebar" id="sidebar">
     <ul id="navMenu">
@@ -31,12 +34,26 @@
     <!-- Contact Section -->
     <section id="contact">
       <h1>Contact</h1>
-      <p>Let's connect! If you're interested in my work or have exciting opportunities in machine learning and data analysis, feel free to reach out:</p>
-      <a href="mailto:louieyang61@gmail.com">Email</a> | <a href="https://linkedin.com/in/fangluyang/">LinkedIn</a>
+
+      <div class="card animate-on-scroll">
+        <p class="contact-text">
+          Let's connect! If you're interested in my work or have exciting opportunities in machine learning and data analysis, feel free to reach out.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:louieyang61@gmail.com" class="contact-link" id="emailLink">
+            <span class="link-icon">✉️</span>
+            <span>Email</span>
+          </a>
+          <a href="https://linkedin.com/in/fangluyang/" target="_blank" class="contact-link" id="linkedinLink">
+            <span class="link-icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
     </section>
   </div>
 
   <!-- JavaScript -->
   <script src="../js/main.js"></script>
 </body>
-</html> 
+</html>
